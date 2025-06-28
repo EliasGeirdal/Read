@@ -1,0 +1,11 @@
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\bin\Debug\net9.0\Read.ApiContracts.deps.json
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\bin\Debug\net9.0\Read.ApiContracts.dll
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\bin\Debug\net9.0\Read.ApiContracts.pdb
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\obj\Debug\net9.0\Read.ApiContracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\obj\Debug\net9.0\Read.ApiContracts.AssemblyInfoInputs.cache
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\obj\Debug\net9.0\Read.ApiContracts.AssemblyInfo.cs
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\obj\Debug\net9.0\Read.ApiContracts.csproj.CoreCompileInputs.cache
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\obj\Debug\net9.0\Read.ApiContracts.dll
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\obj\Debug\net9.0\refint\Read.ApiContracts.dll
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\obj\Debug\net9.0\Read.ApiContracts.pdb
+C:\Users\elias\RiderProjects\Read\Read.ApiContracts\obj\Debug\net9.0\ref\Read.ApiContracts.dll

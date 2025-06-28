@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read.Api", "Read.Api\Read.Api.csproj", "{F1D151EB-6F15-4DD0-978F-720F099E83F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read.ApiContracts", "Read.ApiContracts\Read.ApiContracts.csproj", "{AA9B18C0-F7CB-4B55-9FED-8D91265A3871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read.Application", "Read.Application\Read.Application.csproj", "{0351A21D-5079-4A3B-A8F2-19F7DD0AF30F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1D151EB-6F15-4DD0-978F-720F099E83F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1D151EB-6F15-4DD0-978F-720F099E83F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1D151EB-6F15-4DD0-978F-720F099E83F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1D151EB-6F15-4DD0-978F-720F099E83F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA9B18C0-F7CB-4B55-9FED-8D91265A3871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA9B18C0-F7CB-4B55-9FED-8D91265A3871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA9B18C0-F7CB-4B55-9FED-8D91265A3871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA9B18C0-F7CB-4B55-9FED-8D91265A3871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0351A21D-5079-4A3B-A8F2-19F7DD0AF30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0351A21D-5079-4A3B-A8F2-19F7DD0AF30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0351A21D-5079-4A3B-A8F2-19F7DD0AF30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0351A21D-5079-4A3B-A8F2-19F7DD0AF30F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
