@@ -33,7 +33,7 @@ public class BookController : ControllerBase
     {
         var book = request.MapToBook();
         await _bookService.CreateAsync(book, token);
-        await _outputCacheStore.EvictByTagAsync("movies", token);
+        await _outputCacheStore.EvictByTagAsync("books", token);
 		var bookResponse = book.MapToResponse();
         return CreatedAtAction(nameof(GetV1), new { idOrSlug = book.Id }, bookResponse);
     }

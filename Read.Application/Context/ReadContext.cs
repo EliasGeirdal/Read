@@ -10,7 +10,9 @@ public class ReadContext : DbContext
     }
 
     public DbSet<Book> Books { get; set; } = null!;
-    
+    public DbSet<User> Users { get; set; } = null!;
+
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
@@ -23,5 +25,7 @@ public class ReadContext : DbContext
                 .HasMaxLength(200);
             entity.Property(u => u.Title).HasMaxLength(200);
         });
+
+        modelBuilder.Entity<User>(entity => { entity.HasKey(u => u.Id); });
     }
 }

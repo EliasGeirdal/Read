@@ -10,3 +10,4 @@ C:\Users\elias\RiderProjects\Read\Read.Application\obj\Debug\net9.0\Read.Applica
 C:\Users\elias\RiderProjects\Read\Read.Application\obj\Debug\net9.0\refint\Read.Application.dll
 C:\Users\elias\RiderProjects\Read\Read.Application\obj\Debug\net9.0\Read.Application.pdb
 C:\Users\elias\RiderProjects\Read\Read.Application\obj\Debug\net9.0\ref\Read.Application.dll
+C:\Users\elias\RiderProjects\Read\Read.Application\obj\Debug\net9.0\Read.Application.sourcelink.json

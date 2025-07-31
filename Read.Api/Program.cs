@@ -7,6 +7,7 @@ using Read.Api.Auth;
 using Read.Api.Mapping;
 using Read.Api.Swagger;
 using Read.Application;
+using Read.Application.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,10 +42,10 @@ builder.Services.AddAuthorization(x =>
 
     x.AddPolicy(AuthConstants.AdminUserPolicyName,
         p => p.AddRequirements(new AdminAuthRequirement(config["ApiKey"]!)));
-    
+
     x.AddPolicy(AuthConstants.TrustedMemberPolicyName,
-        p => p.RequireAssertion(c => 
-            c.User.HasClaim(m => m is { Type: AuthConstants.AdminUserClaimName, Value: "true" }) || 
+        p => p.RequireAssertion(c =>
+            c.User.HasClaim(m => m is { Type: AuthConstants.AdminUserClaimName, Value: "true" }) ||
             c.User.HasClaim(m => m is { Type: AuthConstants.TrustedMemberClaimName, Value: "true" })));
 });
 
@@ -61,7 +62,7 @@ builder.Services.AddApiVersioning(x =>
 builder.Services.AddOutputCache(x =>
 {
     x.AddBasePolicy(c => c.Cache());
-    x.AddPolicy("BookCache", c => 
+    x.AddPolicy("BookCache", c =>
         c.Cache()
             .Expire(TimeSpan.FromMinutes(1))
             .Tag("books"));
@@ -73,6 +74,9 @@ builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwa
 builder.Services.AddSwaggerGen(x => x.OperationFilter<SwaggerDefaultValues>());
 
 builder.Services.AddApplication(config);
+
+builder.Services.Configure<JwtOptions>(
+    builder.Configuration.GetSection(JwtOptions.Jwt));
 
 var app = builder.Build();
 
