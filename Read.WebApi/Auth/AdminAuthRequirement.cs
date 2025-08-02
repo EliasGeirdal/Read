@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 
-namespace WebApi.Auth;
+namespace Read.WebApi.Auth;
 
 public class AdminAuthRequirement : IAuthorizationHandler, IAuthorizationRequirement
 {

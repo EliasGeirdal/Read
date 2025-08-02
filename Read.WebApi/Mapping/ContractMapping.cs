@@ -6,7 +6,7 @@ using Read.ApiContracts.Response.Books.CreateBook;
 using Read.Application.Models;
 using Read.Application.Models.Dto;
 
-namespace WebApi.Mapping;
+namespace Read.WebApi.Mapping;
 
 public static class ContractMapping
 {

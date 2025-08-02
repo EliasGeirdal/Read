@@ -1,0 +1,12 @@
+﻿variables:
+
+# Connections
+registryConnection: yourConnection
+
+# Conditions
+isPR: ${{ eq(variables['Build.Reason'], 'PullRequest') }}
+
+# Docker
+dockerRegistry: sonderperson
+imageName: read
+dockerImage: ${{ variables.dockerRegistry }}/${{ variables.imageName }}

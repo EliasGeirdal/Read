@@ -1,0 +1,18 @@
+﻿jobs:
+  - job: Sonarqube
+    displayName: Sonarqube
+    steps:
+      - task: SonarQubePrepare@7
+        inputs:
+          SonarQube: '<YourSonarqubeServerEndpoint>'
+          scannerMode: 'dotnet'
+          projectKey: '<YourProjectKey>'
+      - task: DotNetCoreCLI@2 # Build
+        displayName: 'dotnet build'
+      - task: SonarQubeAnalyze@7 # Code analysis
+      - task: SonarQubePublish@7 # Publish result
+        inputs:
+          pollingTimeoutSec: '300'
+      - bash: |
+        
+        displayName: Check result

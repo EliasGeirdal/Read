@@ -4,9 +4,9 @@ using Read.ApiContracts.Request.Auth;
 using Read.ApiContracts.Request.User;
 using Read.ApiContracts.Response.Auth;
 using Read.Application.Services.Auth;
-using WebApi.Mapping;
+using Read.WebApi.Mapping;
 
-namespace WebApi.Controllers;
+namespace Read.WebApi.Controllers;
 
 [ApiController]
 [ApiVersion(1.0)]

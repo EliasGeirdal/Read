@@ -6,10 +6,10 @@ using Read.ApiContracts.Request.Book;
 using Read.ApiContracts.Response.Books.CreateBook;
 using Read.ApiContracts.Response.Validation;
 using Read.Application.Services.Book;
-using WebApi.Auth;
-using WebApi.Mapping;
+using Read.WebApi.Auth;
+using Read.WebApi.Mapping;
 
-namespace WebApi.Controllers;
+namespace Read.WebApi.Controllers;
 
 [ApiController]
 [ApiVersion(1.0)]

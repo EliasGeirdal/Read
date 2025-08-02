@@ -5,8 +5,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Read.Application;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using WebApi.Auth;
-using WebApi.Mapping;
+using Read.WebApi.Auth;
+using Read.WebApi.Mapping;
 using WebApi.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -65,18 +65,17 @@ builder.Services.AddApplication(config);
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(x =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(x =>
+    foreach (var description in app.DescribeApiVersions())
     {
-        foreach (var description in app.DescribeApiVersions())
-        {
-            x.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
-                description.GroupName);
-        }
-    });
-}
+        x.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json",
+            description.GroupName);
+    }
+});
+
+app.Urls.Add("http://*:80");
 
 app.UseHttpsRedirection();
 

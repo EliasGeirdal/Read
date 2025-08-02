@@ -1,4 +1,4 @@
-﻿namespace WebApi.Auth;
+﻿namespace Read.WebApi.Auth;
 
 public static class IdentityExtensions
 {

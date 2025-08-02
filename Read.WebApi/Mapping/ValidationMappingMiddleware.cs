@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
 using Read.ApiContracts.Response.Validation;
 
-namespace WebApi.Mapping;
+namespace Read.WebApi.Mapping;
 
 public class ValidationMappingMiddleware
 {

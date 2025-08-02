@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace WebApi.Auth;
+namespace Read.WebApi.Auth;
 
 public class ApiKeyAuthFilter : IAuthorizationFilter
 {

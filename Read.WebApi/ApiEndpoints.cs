@@ -1,4 +1,4 @@
-﻿namespace WebApi;
+﻿namespace Read.WebApi;
 
 public static class ApiEndpoints
 {

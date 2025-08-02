@@ -1,0 +1,17 @@
+﻿jobs:
+  - job: BuildAndScan
+    displayName: Build and Scan
+    steps:
+      - bash: |
+          docker build -t $(dockerImage):$(imageTag) .
+        displayName: Docker - build
+  
+  #      - task: SnykSecurityScan@0
+  #        displayName: Snyk - security scan
+  #        continueOnError: true
+  #        inputs:
+  #          serviceConnectionEndpoint: 'service-connection-endpoint'
+  #          testType: 'container'
+  #          dockerImageName: $(dockerImage):$(imageTag)
+  #          dockerfilePath: 'Dockerfile'
+  #          monitorOnBuild: true

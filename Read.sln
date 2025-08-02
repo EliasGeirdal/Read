@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read.ApiContracts", "Read.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read.Application", "Read.Application\Read.Application.csproj", "{0351A21D-5079-4A3B-A8F2-19F7DD0AF30F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{ABC62B2B-858E-4107-8DE1-EDBD0C572C2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read.WebApi", "Read.WebApi\Read.WebApi.csproj", "{ABC62B2B-858E-4107-8DE1-EDBD0C572C2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,61 @@
+﻿name: $(BuildID)
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - dev
+      - test
+      - staging
+      - main
+  #  tags:
+  #    include:
+  #      - v*
+  paths:
+    exclude:
+      - README.md
+
+pr:
+  - test
+  - staging
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+schedules:
+  - cron: "0 12 * * 0"
+    displayName: Weekly Sunday build
+    always: true
+    branches:
+      include:
+        - main
+
+variables:
+  - template: Variables/global.yaml
+
+stages:
+  
+  # Test
+  - stage: Test
+    displayName: Tests
+    jobs:
+      - template: Jobs/test.yaml
+  
+  # Static code analysis
+  - stage: Static code analysis
+    displayName: Static code analysis
+    jobs:
+      - template: Jobs/sonarqube.yaml
+  
+  # Build
+  - stage: BuildAndScan
+    displayName: Scan image
+    jobs:
+      - template: Jobs/scanImage.yaml
+  
+  # Push to registry
+  - stage: BuildAndPush
+    displayName: Push to registry
+    jobs:
+      - template: Jobs/pushImage.yaml
