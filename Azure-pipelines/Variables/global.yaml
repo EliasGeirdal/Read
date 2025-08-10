@@ -1,7 +1,7 @@
 ﻿# Azure-pipelines/Variables/global.yaml
 variables:
   - name: registryConnection
-    value: yourConnection
+    value: dockerHubRegistry
 
   - name: isPR
     value: ${{ eq(variables['Build.Reason'], 'PullRequest') }}
