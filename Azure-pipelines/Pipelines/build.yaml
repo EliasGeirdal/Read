@@ -32,7 +32,7 @@ schedules:
         - main
 
 variables:
-  - template: Variables/global.yaml
+  - template: ../Variables/global.yaml
 
 stages:
   
@@ -40,22 +40,22 @@ stages:
   - stage: Test
     displayName: Tests
     jobs:
-      - template: Jobs/test.yaml
+      - template: ../Jobs/test.yaml
   
   # Static code analysis
   - stage: Static code analysis
     displayName: Static code analysis
     jobs:
-      - template: Jobs/sonarqube.yaml
+      - template: ../Jobs/sonarqube.yaml
   
   # Build
   - stage: BuildAndScan
     displayName: Scan image
     jobs:
-      - template: Jobs/scanImage.yaml
+      - template: ../Jobs/scanImage.yaml
   
   # Push to registry
   - stage: BuildAndPush
     displayName: Push to registry
     jobs:
-      - template: Jobs/pushImage.yaml
+      - template: ../Jobs/pushImage.yaml
