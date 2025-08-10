@@ -57,5 +57,6 @@ stages:
   # Push to registry
   - stage: BuildAndPush
     displayName: Push to registry
+    dependsOn: BuildAndScan
     jobs:
       - template: ../Jobs/pushImage.yaml
