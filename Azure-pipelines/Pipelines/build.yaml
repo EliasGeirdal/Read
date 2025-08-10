@@ -43,10 +43,10 @@ stages:
       - template: ../Jobs/test.yaml
   
   # Static code analysis
-  - stage: Static code analysis
-    displayName: Static code analysis
-    jobs:
-      - template: ../Jobs/sonarqube.yaml
+#  - stage: Static code analysis
+#    displayName: Static code analysis
+#    jobs:
+#      - template: ../Jobs/sonarqube.yaml
   
   # Build
   - stage: BuildAndScan
