@@ -1,12 +1,16 @@
-﻿variables:
+﻿# Azure-pipelines/Variables/global.yaml
+variables:
+  - name: registryConnection
+    value: yourConnection
 
-# Connections
-registryConnection: yourConnection
+  - name: isPR
+    value: ${{ eq(variables['Build.Reason'], 'PullRequest') }}
 
-# Conditions
-isPR: ${{ eq(variables['Build.Reason'], 'PullRequest') }}
+  - name: dockerRegistry
+    value: sonderperson
 
-# Docker
-dockerRegistry: sonderperson
-imageName: read
-dockerImage: ${{ variables.dockerRegistry }}/${{ variables.imageName }}
+  - name: imageName
+    value: read
+
+  - name: dockerImage
+    value: ${{ variables.dockerRegistry }}/${{ variables.imageName }}
